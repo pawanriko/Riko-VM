@@ -1,0 +1,12 @@
+; stack.rka -- CALL/RET and PUSH/POP.
+; A subroutine doubles R1 using the stack.
+; Expected result: R1 == 84, SP == 0xFFFF (stack empty again).
+
+LDI R1, 42
+CALL double
+HALT
+double:
+PUSH R1
+POP R2
+ADD R1, R2, R2
+RET

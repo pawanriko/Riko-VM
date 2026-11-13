@@ -1,0 +1,8 @@
+; memory.rka -- STORE a word, LOAD it back.
+; Expected result: R2 == 0xBEEF.
+
+LDI R1, 0xBEEF
+STORE R1, 0x2000
+LDI R1, 0
+LOAD R2, 0x2000
+HALT

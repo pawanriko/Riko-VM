@@ -1,0 +1,11 @@
+; countdown.rka -- loop with a conditional branch.
+; Sum 5+4+3+2+1. Expected result: R2 == 15, R1 == 0.
+
+LDI R1, 5     ; counter
+LDI R2, 0     ; sum
+LDI R3, 1     ; step
+loop:
+ADD R2, R2, R1
+SUB R1, R1, R3
+JNZ loop
+HALT

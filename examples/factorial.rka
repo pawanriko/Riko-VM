@@ -1,0 +1,11 @@
+; factorial.rka -- 5! with a multiply loop.
+; Expected result: R2 == 120.
+
+LDI R1, 5     ; counter
+LDI R2, 1     ; product
+LDI R3, 1     ; step
+loop:
+MUL R2, R2, R1
+SUB R1, R1, R3
+JNZ loop
+HALT
