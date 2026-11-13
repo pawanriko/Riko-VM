@@ -1,0 +1,10 @@
+; add.rka -- the acceptance program (spec section 8).
+; Load 7 and 5, add them, halt. Expected result: R3 == 12.
+; Run it with:
+;   python3 -m rikovm assemble examples/add.rka -o build/add.rkp
+;   python3 -m rikovm run build/add.rkp
+
+LDI R1, 7
+LDI R2, 5
+ADD R3, R1, R2
+HALT
